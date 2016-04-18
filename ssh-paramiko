@@ -15,6 +15,6 @@ def ${SCRIPT_NAME}():
     trans.connect(conn)
     ''' Enter your desire command'''
     cmd = 'source ~/.profile ;cd //path/to/folder ; pkexec shutdown , etc'
-    stdin, stdout, stderr = ssh.exec_command(cmd_stop)
+    stdin, stdout, stderr = ssh.exec_command(cmd)
     print stdout.read()
 
