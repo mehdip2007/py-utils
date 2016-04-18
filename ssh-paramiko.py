@@ -7,14 +7,14 @@ from sys import stdout
 import paramiko
 import sys
 
-def ${SCRIPT_NAME}():
-    trans = paramiko.Transport('${SERVER_IP}')
+def {SCRIPT_NAME}():
+    trans = paramiko.Transport('{SERVER_IP}')
     ssh = paramiko.SSHClient()
     ssh.load_system_host_keys()
-    conn = ssh.connect('${SERVER_IP}',username='${USERNAME}',password='${PASSWORD}')
+    conn = ssh.connect('{SERVER_IP}',username='{USERNAME}',password='{PASSWORD}')
     trans.connect(conn)
     ''' Enter your desire command'''
-    cmd = 'source ~/.profile ;cd //path/to/folder ; pkexec shutdown , etc'
+    cmd = 'source ~/.profile ;cd //path/to/folder ; pkexec shutdown , lsblk, etc'
     stdin, stdout, stderr = ssh.exec_command(cmd)
     print stdout.read()
 
