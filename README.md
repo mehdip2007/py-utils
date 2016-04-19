@@ -16,6 +16,9 @@ sudo pip install pysftp paramiko
 #Example usage
 
 ```
-python2.7 ./script.py
+python2.7 ./pyuploader.py  '''used for uploading by pysftp API'''
+
+python2.7 ./ssh-paramiko.py  '''used for uploading by paramiko API'''
+
 
 ```
